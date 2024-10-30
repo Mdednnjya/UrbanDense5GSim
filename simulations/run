@@ -1,0 +1,4 @@
+#!/bin/sh
+cd `dirname $0`
+../src/urbandense5gsim -n .:../src $*
+# for shared lib, use: opp_run -l ../src/urbandense5gsim -n .:../src $*
