@@ -30,7 +30,7 @@ network UrbanDenseNetwork
     parameters:
         int numUe = default(1);
         int numBgCells = default(0);
-        @display("bgi=background/budapest;bgb=991,540");
+        @display("bgi=background/budapest;bgb=1213,671");
     submodules:
         channelControl: LteChannelControl {
             @display("p=50,25;is=s");

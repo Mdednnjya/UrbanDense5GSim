@@ -1,9 +1,9 @@
-file 5734 1730302648                                            
+file 5736 1730863793                                            
 version 3
-run Single-UE-0-20241030-22:33:36-9492
+run Single-UE-0-20241106-10:23:23-17788
 attr configname Single-UE
-attr datetime 20241030-22:33:36
-attr datetimef 20241030-223336
+attr datetime 20241106-10:23:23
+attr datetimef 20241106-102323
 attr experiment Single-UE
 attr inifile omnetpp.ini
 attr iterationvars ""
@@ -11,7 +11,7 @@ attr iterationvarsd ""
 attr iterationvarsf ""
 attr measurement ""
 attr network urbandense5gsim.simulations.UrbanDenseNetwork
-attr processid 9492
+attr processid 17788
 attr repetition 0
 attr replication #0
 attr resultdir results
@@ -133,19 +133,19 @@ attr interpolationmode none
 attr recordingmode vector(count)
 attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
 attr title "packets dropped (checksum error), count"
-0	5592 9 0 0 1 1 1 0 0 0 0
-1	5601 9 0 0 1 1 1 0 0 0 0
-2	5610 9 0 0 1 1 1 0 0 0 0
-3	5619 9 0 0 1 1 1 0 0 0 0
-4	5628 9 0 0 1 1 1 0 0 0 0
-5	5637 9 0 0 1 1 1 0 0 0 0
-6	5646 9 0 0 1 1 1 0 0 0 0
-7	5655 9 0 0 1 1 1 0 0 0 0
-8	5664 9 0 0 1 1 1 0 0 0 0
-9	5673 9 0 0 1 1 1 0 0 0 0
-10	5682 10 0 0 1 1 1 0 0 0 0
-11	5692 10 0 0 1 1 1 0 0 0 0
-12	5702 10 0 0 1 1 1 0 0 0 0
-13	5712 10 0 0 1 1 1 0 0 0 0
-14	5722 10 0 0 1 1 1 0 0 0 0
+0	5594 9 0 0 1 1 1 0 0 0 0
+1	5603 9 0 0 1 1 1 0 0 0 0
+2	5612 9 0 0 1 1 1 0 0 0 0
+3	5621 9 0 0 1 1 1 0 0 0 0
+4	5630 9 0 0 1 1 1 0 0 0 0
+5	5639 9 0 0 1 1 1 0 0 0 0
+6	5648 9 0 0 1 1 1 0 0 0 0
+7	5657 9 0 0 1 1 1 0 0 0 0
+8	5666 9 0 0 1 1 1 0 0 0 0
+9	5675 9 0 0 1 1 1 0 0 0 0
+10	5684 10 0 0 1 1 1 0 0 0 0
+11	5694 10 0 0 1 1 1 0 0 0 0
+12	5704 10 0 0 1 1 1 0 0 0 0
+13	5714 10 0 0 1 1 1 0 0 0 0
+14	5724 10 0 0 1 1 1 0 0 0 0
 

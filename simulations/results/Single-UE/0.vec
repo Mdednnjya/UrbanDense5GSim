@@ -1,8 +1,8 @@
 version 3
-run Single-UE-0-20241030-22:33:36-9492
+run Single-UE-0-20241106-10:23:23-17788
 attr configname Single-UE
-attr datetime 20241030-22:33:36
-attr datetimef 20241030-223336
+attr datetime 20241106-10:23:23
+attr datetimef 20241106-102323
 attr experiment Single-UE
 attr inifile omnetpp.ini
 attr iterationvars ""
@@ -10,7 +10,7 @@ attr iterationvarsd ""
 attr iterationvarsf ""
 attr measurement ""
 attr network urbandense5gsim.simulations.UrbanDenseNetwork
-attr processid 9492
+attr processid 17788
 attr repetition 0
 attr replication #0
 attr resultdir results
