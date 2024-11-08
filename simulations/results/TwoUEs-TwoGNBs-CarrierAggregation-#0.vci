@@ -1,0 +1,214 @@
+file 9287 1731034238                                            
+version 3
+run TwoUEs-TwoGNBs-CarrierAggregation-0-20241108-09:46:24-26464
+attr configname TwoUEs-TwoGNBs-CarrierAggregation
+attr datetime 20241108-09:46:24
+attr datetimef 20241108-094624
+attr experiment TwoUEs-TwoGNBs-CarrierAggregation
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsd ""
+attr iterationvarsf ""
+attr measurement ""
+attr network urbandense5gsim.simulations.UrbanDenseNetwork
+attr processid 26464
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+config image-path ../images;../../simu5g/images;../../inet4.5/images
+config *.carrierAggregation.numComponentCarriers 2
+config *.carrierAggregation.componentCarrier[0].carrierFrequency 3.5GHz
+config *.carrierAggregation.componentCarrier[0].numBands 6
+config *.carrierAggregation.componentCarrier[0].numerologyIndex 1
+config *.carrierAggregation.componentCarrier[1].carrierFrequency 28GHz
+config *.carrierAggregation.componentCarrier[1].numBands 6
+config *.carrierAggregation.componentCarrier[1].numerologyIndex 3
+config *.gnb1.mobility.initialX 300m
+config *.gnb1.mobility.initialY 500m
+config *.gnb1.cellId 1
+config *.gnb1.macNodeId 1
+config *.gnb1.macCellId 1
+config *.gnb1.cellularNic.numCarriers 2
+config *.gnb1.cellularNic.channelModel[0].componentCarrierIndex 0
+config *.gnb1.cellularNic.channelModel[1].componentCarrierIndex 1
+config *.gnb1.cellularNic.channelModel[*].shadowing true
+config *.gnb1.cellularNic.channelModel[*].scenario "\"URBAN_MACROCELL\""
+config *.gnb1.cellularNic.channelModel[*].nodeb_height 25
+config *.gnb1.cellularNic.channelModel[*].ue_height 1.5
+config *.gnb1.cellularNic.channelModel[*].carrierFrequency 2GHz
+config *.gnb1.cellularNic.channelModel[*].alpha_aq_nlos 20
+config *.gnb1.cellularNic.channelModel[*].system "\"NR\""
+config *.gnb1.cellularNic.phy.enableD2DCqiReporting true
+config *.gnb1.cellularNic.phy.enableD2DFeedback true
+config *.gnb2.mobility.initialX 700m
+config *.gnb2.mobility.initialY 500m
+config *.gnb2.cellId 2
+config *.gnb2.macNodeId 2
+config *.gnb2.macCellId 2
+config *.gnb2.cellularNic.numCarriers 2
+config *.gnb2.cellularNic.channelModel[0].componentCarrierIndex 0
+config *.gnb2.cellularNic.channelModel[1].componentCarrierIndex 1
+config *.gnb2.cellularNic.channelModel[*].shadowing true
+config *.gnb2.cellularNic.channelModel[*].scenario "\"URBAN_MACROCELL\""
+config *.gnb2.cellularNic.channelModel[*].nodeb_height 25
+config *.gnb2.cellularNic.channelModel[*].ue_height 1.5
+config *.gnb2.cellularNic.channelModel[*].carrierFrequency 2GHz
+config *.gnb2.cellularNic.channelModel[*].alpha_aq_nlos 20
+config *.gnb2.cellularNic.channelModel[*].system "\"NR\""
+config *.gnb2.cellularNic.phy.enableD2DCqiReporting true
+config *.gnb2.cellularNic.phy.enableD2DFeedback true
+config *.ueSource.mobility.initialX 300m
+config *.ueSource.mobility.initialY 700m
+config *.ueSource.macNodeId 1025
+config *.ueSource.macCellId 1
+config *.ueSource.masterId 1
+config *.ueSource.nrMacNodeId 1025
+config *.ueSource.nrMacCellId 1
+config *.ueSource.nrMasterId 1
+config *.ueSource.cellularNic.numNRCarriers 2
+config *.ueSource.cellularNic.nrChannelModel[0].componentCarrierIndex 0
+config *.ueSource.cellularNic.nrChannelModel[1].componentCarrierIndex 1
+config *.ueSource.cellularNic.phy.enableD2D true
+config *.ueSource.cellularNic.phy.enableD2DCqiReporting true
+config *.ueSource.cellularNic.phy.enableD2DFeedback true
+config *.ueDestination.mobility.initialX 700m
+config *.ueDestination.mobility.initialY 700m
+config *.ueDestination.macNodeId 1026
+config *.ueDestination.macCellId 2
+config *.ueDestination.masterId 2
+config *.ueDestination.nrMacNodeId 1026
+config *.ueDestination.nrMacCellId 2
+config *.ueDestination.nrMasterId 2
+config *.ueDestination.cellularNic.numNRCarriers 2
+config *.ueDestination.cellularNic.nrChannelModel[0].componentCarrierIndex 0
+config *.ueDestination.cellularNic.nrChannelModel[1].componentCarrierIndex 1
+config *.ueDestination.cellularNic.phy.enableD2D true
+config *.ueDestination.cellularNic.phy.enableD2DCqiReporting true
+config *.ueDestination.cellularNic.phy.enableD2DFeedback true
+config *.ueSource.numApps 1
+config *.ueDestination.numApps 1
+config *.ueSource.app[0].typename CbrSender
+config *.ueSource.app[0].destAddress "\"ueDestination\""
+config *.ueSource.app[0].destPort 1000
+config *.ueSource.app[0].localPort 3088
+config *.ueSource.app[0].PacketSize 1000
+config *.ueSource.app[0].sampling_time 0.01s
+config *.ueSource.app[0].startTime 0.1s
+config *.ueDestination.app[0].typename CbrReceiver
+config *.ueDestination.app[0].localPort 1000
+config **.cellularNic.d2dInitialMode false
+config **.cellularNic.phy.channelModel.D2DEnablePathLoss true
+config **.cellularNic.phy.channelModel.d2dPathLossMetric "\"NearestEnb\""
+config **.cellularNic.phy.channelModel.d2dMultiConnected false
+config **.amcMode "\"D2D\""
+config **.usePreconfiguredTxParams true
+config **.enterpriseMacNodeId true
+config network urbandense5gsim.simulations.UrbanDenseNetwork
+config sim-time-limit 10s
+config warmup-period 1s
+config **.routingRecorder.enabled false
+config **.amcType "\"NRAmc\""
+config **.targetBler 0.01
+config **.blerShift 5
+config *.configurator.config "xmldoc(\"./demo.xml\")"
+config **.mobility.constraintAreaMaxX 1000m
+config **.mobility.constraintAreaMaxY 1000m
+config **.mobility.constraintAreaMinX 0m
+config **.mobility.constraintAreaMinY 0m
+config **.mobility.constraintAreaMinZ 0m
+config **.mobility.constraintAreaMaxZ 0m
+config **.mobility.initFromDisplayString false
+
+vector 0 UrbanDenseNetwork.upf.udp passedUpPk:vector(count) ETV
+attr interpolationmode none
+attr recordingmode vector(count)
+attr source packetSentToUpper
+attr title "packets passed up, count"
+vector 1 UrbanDenseNetwork.upf.udp droppedPkWrongPort:vector(count) ETV
+attr interpolationmode none
+attr recordingmode vector(count)
+attr source packetDropReasonIsNoPortFound(packetDropped)
+attr title "packets dropped (wrong port), count"
+vector 2 UrbanDenseNetwork.upf.udp droppedPkBadChecksum:vector(count) ETV
+attr interpolationmode none
+attr recordingmode vector(count)
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packets dropped (checksum error), count"
+vector 3 UrbanDenseNetwork.gnb1.udp passedUpPk:vector(count) ETV
+attr interpolationmode none
+attr recordingmode vector(count)
+attr source packetSentToUpper
+attr title "packets passed up, count"
+vector 4 UrbanDenseNetwork.gnb1.udp droppedPkWrongPort:vector(count) ETV
+attr interpolationmode none
+attr recordingmode vector(count)
+attr source packetDropReasonIsNoPortFound(packetDropped)
+attr title "packets dropped (wrong port), count"
+vector 5 UrbanDenseNetwork.gnb1.udp droppedPkBadChecksum:vector(count) ETV
+attr interpolationmode none
+attr recordingmode vector(count)
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packets dropped (checksum error), count"
+vector 6 UrbanDenseNetwork.ueSource.udp passedUpPk:vector(count) ETV
+attr interpolationmode none
+attr recordingmode vector(count)
+attr source packetSentToUpper
+attr title "packets passed up, count"
+vector 7 UrbanDenseNetwork.ueSource.udp droppedPkWrongPort:vector(count) ETV
+attr interpolationmode none
+attr recordingmode vector(count)
+attr source packetDropReasonIsNoPortFound(packetDropped)
+attr title "packets dropped (wrong port), count"
+vector 8 UrbanDenseNetwork.ueSource.udp droppedPkBadChecksum:vector(count) ETV
+attr interpolationmode none
+attr recordingmode vector(count)
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packets dropped (checksum error), count"
+vector 9 UrbanDenseNetwork.gnb2.udp passedUpPk:vector(count) ETV
+attr interpolationmode none
+attr recordingmode vector(count)
+attr source packetSentToUpper
+attr title "packets passed up, count"
+vector 10 UrbanDenseNetwork.gnb2.udp droppedPkWrongPort:vector(count) ETV
+attr interpolationmode none
+attr recordingmode vector(count)
+attr source packetDropReasonIsNoPortFound(packetDropped)
+attr title "packets dropped (wrong port), count"
+vector 11 UrbanDenseNetwork.gnb2.udp droppedPkBadChecksum:vector(count) ETV
+attr interpolationmode none
+attr recordingmode vector(count)
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packets dropped (checksum error), count"
+vector 12 UrbanDenseNetwork.ueDestination.udp passedUpPk:vector(count) ETV
+attr interpolationmode none
+attr recordingmode vector(count)
+attr source packetSentToUpper
+attr title "packets passed up, count"
+vector 13 UrbanDenseNetwork.ueDestination.udp droppedPkWrongPort:vector(count) ETV
+attr interpolationmode none
+attr recordingmode vector(count)
+attr source packetDropReasonIsNoPortFound(packetDropped)
+attr title "packets dropped (wrong port), count"
+vector 14 UrbanDenseNetwork.ueDestination.udp droppedPkBadChecksum:vector(count) ETV
+attr interpolationmode none
+attr recordingmode vector(count)
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packets dropped (checksum error), count"
+0	9145 9 0 0 1 1 1 0 0 0 0
+1	9154 9 0 0 1 1 1 0 0 0 0
+2	9163 9 0 0 1 1 1 0 0 0 0
+3	9172 9 0 0 1 1 1 0 0 0 0
+4	9181 9 0 0 1 1 1 0 0 0 0
+5	9190 9 0 0 1 1 1 0 0 0 0
+6	9199 9 0 0 1 1 1 0 0 0 0
+7	9208 9 0 0 1 1 1 0 0 0 0
+8	9217 9 0 0 1 1 1 0 0 0 0
+9	9226 9 0 0 1 1 1 0 0 0 0
+10	9235 10 0 0 1 1 1 0 0 0 0
+11	9245 10 0 0 1 1 1 0 0 0 0
+12	9255 10 0 0 1 1 1 0 0 0 0
+13	9265 10 0 0 1 1 1 0 0 0 0
+14	9275 10 0 0 1 1 1 0 0 0 0
+

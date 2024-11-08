@@ -28,39 +28,43 @@ import simu5g.world.radio.LteChannelControl;
 network UrbanDenseNetwork
 {
     parameters:
-        int numUe = default(1);
-        int numBgCells = default(1);
-        @display("bgi=background/budapest;bgb=1213,671");
+        double radius @unit(m) = default(1000m);
+        @display("bgi=background/budapest;bgb=1090.7362,771.27374");
 
     submodules:
         channelControl: LteChannelControl {
             @display("p=50,25;is=s");
+            @class(LteChannelControl);
         }
         configurator: Ipv4NetworkConfigurator {
-            @display("p=50,125");
+            @display("p=50,75");
+            config = xmldoc("demo.xml");
         }
         binder: Binder {
-            @display("p=50,175;is=s");
+            @display("p=50,125;is=s");
         }
         carrierAggregation: CarrierAggregation {
-            @display("p=50.993748,258.7;is=s");
-        }
-        server: StandardHost {
-            @display("p=212,118;is=n;i=device/server");
+            @display("p=50,175;is=s");
         }
         upf: Upf {
-            @display("p=527.35,116.9125");
+            @display("p=587.20245,222.1025");
         }
-        gnb: gNodeB {
-            @display("p=726.35,277.35626;is=vl");
+
+        gnb1: gNodeB {
+            @display("p=325.5475,267.74;is=vl");
         }
-        bgCell[numBgCells]: BackgroundCell {
-            @display("p=391,258;is=vl");
+        ueSource: NRUe {
+            @display("p=348.36624,491.36374");
         }
-        ue[numUe]: NRUe {
-            @display("p=628.09375,411.68124");
+
+        gnb2: gNodeB {
+            @display("p=847.33624,267.74;is=vl");
         }
-    connections:
-        server.pppg++ <--> Eth10G <--> upf.pppg++;
-        upf.pppg++ <--> Eth10G <--> gnb.ppp;
+        ueDestination: NRUe {
+            @display("p=789.52875,491.36374");
+        }
+
+    connections allowunconnected:
+        upf.pppg++ <--> Eth10G <--> gnb1.ppp;
+        upf.pppg++ <--> Eth10G <--> gnb2.ppp;
 }

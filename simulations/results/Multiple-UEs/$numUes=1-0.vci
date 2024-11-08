@@ -1,9 +1,9 @@
-file 6870 1730825063                                            
+file 6134 1730912906                                            
 version 3
-run Multiple-UEs-0-20241105-23:43:14-28928
+run Multiple-UEs-0-20241107-00:08:09-17488
 attr configname Multiple-UEs
-attr datetime 20241105-23:43:14
-attr datetimef 20241105-234314
+attr datetime 20241107-00:08:09
+attr datetimef 20241107-000809
 attr experiment Multiple-UEs
 attr inifile omnetpp.ini
 attr iterationvars $numUes=1
@@ -11,7 +11,7 @@ attr iterationvarsd numUes=1
 attr iterationvarsf numUes=1-
 attr measurement $numUes=1
 attr network urbandense5gsim.simulations.UrbanDenseNetwork
-attr processid 28928
+attr processid 17488
 attr repetition 0
 attr replication #0
 attr resultdir results
@@ -109,64 +109,46 @@ attr interpolationmode none
 attr recordingmode vector(count)
 attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
 attr title "packets dropped (checksum error), count"
-vector 6 UrbanDenseNetwork.iUpf.udp passedUpPk:vector(count) ETV
+vector 6 UrbanDenseNetwork.gnb.udp passedUpPk:vector(count) ETV
 attr interpolationmode none
 attr recordingmode vector(count)
 attr source packetSentToUpper
 attr title "packets passed up, count"
-vector 7 UrbanDenseNetwork.iUpf.udp droppedPkWrongPort:vector(count) ETV
+vector 7 UrbanDenseNetwork.gnb.udp droppedPkWrongPort:vector(count) ETV
 attr interpolationmode none
 attr recordingmode vector(count)
 attr source packetDropReasonIsNoPortFound(packetDropped)
 attr title "packets dropped (wrong port), count"
-vector 8 UrbanDenseNetwork.iUpf.udp droppedPkBadChecksum:vector(count) ETV
+vector 8 UrbanDenseNetwork.gnb.udp droppedPkBadChecksum:vector(count) ETV
 attr interpolationmode none
 attr recordingmode vector(count)
 attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
 attr title "packets dropped (checksum error), count"
-vector 9 UrbanDenseNetwork.gnb.udp passedUpPk:vector(count) ETV
+vector 9 UrbanDenseNetwork.ue[0].udp passedUpPk:vector(count) ETV
 attr interpolationmode none
 attr recordingmode vector(count)
 attr source packetSentToUpper
 attr title "packets passed up, count"
-vector 10 UrbanDenseNetwork.gnb.udp droppedPkWrongPort:vector(count) ETV
+vector 10 UrbanDenseNetwork.ue[0].udp droppedPkWrongPort:vector(count) ETV
 attr interpolationmode none
 attr recordingmode vector(count)
 attr source packetDropReasonIsNoPortFound(packetDropped)
 attr title "packets dropped (wrong port), count"
-vector 11 UrbanDenseNetwork.gnb.udp droppedPkBadChecksum:vector(count) ETV
+vector 11 UrbanDenseNetwork.ue[0].udp droppedPkBadChecksum:vector(count) ETV
 attr interpolationmode none
 attr recordingmode vector(count)
 attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
 attr title "packets dropped (checksum error), count"
-vector 12 UrbanDenseNetwork.ue[0].udp passedUpPk:vector(count) ETV
-attr interpolationmode none
-attr recordingmode vector(count)
-attr source packetSentToUpper
-attr title "packets passed up, count"
-vector 13 UrbanDenseNetwork.ue[0].udp droppedPkWrongPort:vector(count) ETV
-attr interpolationmode none
-attr recordingmode vector(count)
-attr source packetDropReasonIsNoPortFound(packetDropped)
-attr title "packets dropped (wrong port), count"
-vector 14 UrbanDenseNetwork.ue[0].udp droppedPkBadChecksum:vector(count) ETV
-attr interpolationmode none
-attr recordingmode vector(count)
-attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
-attr title "packets dropped (checksum error), count"
-0	6728 9 0 0 1 1 1 0 0 0 0
-1	6737 9 0 0 1 1 1 0 0 0 0
-2	6746 9 0 0 1 1 1 0 0 0 0
-3	6755 9 0 0 1 1 1 0 0 0 0
-4	6764 9 0 0 1 1 1 0 0 0 0
-5	6773 9 0 0 1 1 1 0 0 0 0
-6	6782 9 0 0 1 1 1 0 0 0 0
-7	6791 9 0 0 1 1 1 0 0 0 0
-8	6800 9 0 0 1 1 1 0 0 0 0
-9	6809 9 0 0 1 1 1 0 0 0 0
-10	6818 10 0 0 1 1 1 0 0 0 0
-11	6828 10 0 0 1 1 1 0 0 0 0
-12	6838 10 0 0 1 1 1 0 0 0 0
-13	6848 10 0 0 1 1 1 0 0 0 0
-14	6858 10 0 0 1 1 1 0 0 0 0
+0	6022 9 0 0 1 1 1 0 0 0 0
+1	6031 9 0 0 1 1 1 0 0 0 0
+2	6040 9 0 0 1 1 1 0 0 0 0
+3	6049 9 0 0 1 1 1 0 0 0 0
+4	6058 9 0 0 1 1 1 0 0 0 0
+5	6067 9 0 0 1 1 1 0 0 0 0
+6	6076 9 0 0 1 1 1 0 0 0 0
+7	6085 9 0 0 1 1 1 0 0 0 0
+8	6094 9 0 0 1 1 1 0 0 0 0
+9	6103 9 0 0 1 1 1 0 0 0 0
+10	6112 10 0 0 1 1 1 0 0 0 0
+11	6122 10 0 0 1 1 1 0 0 0 0
 
