@@ -1,5 +1,5 @@
-file 9287 1731034238                                            
-version 3
+file 9287 1731516017                                            
+version 2
 run TwoUEs-TwoGNBs-CarrierAggregation-0-20241108-09:46:24-26464
 attr configname TwoUEs-TwoGNBs-CarrierAggregation
 attr datetime 20241108-09:46:24
@@ -126,89 +126,88 @@ attr interpolationmode none
 attr recordingmode vector(count)
 attr source packetSentToUpper
 attr title "packets passed up, count"
+0	9145 9 0 0 1 1 1 0 0 0 0
 vector 1 UrbanDenseNetwork.upf.udp droppedPkWrongPort:vector(count) ETV
 attr interpolationmode none
 attr recordingmode vector(count)
 attr source packetDropReasonIsNoPortFound(packetDropped)
 attr title "packets dropped (wrong port), count"
+1	9154 9 0 0 1 1 1 0 0 0 0
 vector 2 UrbanDenseNetwork.upf.udp droppedPkBadChecksum:vector(count) ETV
 attr interpolationmode none
 attr recordingmode vector(count)
 attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
 attr title "packets dropped (checksum error), count"
+2	9163 9 0 0 1 1 1 0 0 0 0
 vector 3 UrbanDenseNetwork.gnb1.udp passedUpPk:vector(count) ETV
 attr interpolationmode none
 attr recordingmode vector(count)
 attr source packetSentToUpper
 attr title "packets passed up, count"
+3	9172 9 0 0 1 1 1 0 0 0 0
 vector 4 UrbanDenseNetwork.gnb1.udp droppedPkWrongPort:vector(count) ETV
 attr interpolationmode none
 attr recordingmode vector(count)
 attr source packetDropReasonIsNoPortFound(packetDropped)
 attr title "packets dropped (wrong port), count"
+4	9181 9 0 0 1 1 1 0 0 0 0
 vector 5 UrbanDenseNetwork.gnb1.udp droppedPkBadChecksum:vector(count) ETV
 attr interpolationmode none
 attr recordingmode vector(count)
 attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
 attr title "packets dropped (checksum error), count"
+5	9190 9 0 0 1 1 1 0 0 0 0
 vector 6 UrbanDenseNetwork.ueSource.udp passedUpPk:vector(count) ETV
 attr interpolationmode none
 attr recordingmode vector(count)
 attr source packetSentToUpper
 attr title "packets passed up, count"
+6	9199 9 0 0 1 1 1 0 0 0 0
 vector 7 UrbanDenseNetwork.ueSource.udp droppedPkWrongPort:vector(count) ETV
 attr interpolationmode none
 attr recordingmode vector(count)
 attr source packetDropReasonIsNoPortFound(packetDropped)
 attr title "packets dropped (wrong port), count"
+7	9208 9 0 0 1 1 1 0 0 0 0
 vector 8 UrbanDenseNetwork.ueSource.udp droppedPkBadChecksum:vector(count) ETV
 attr interpolationmode none
 attr recordingmode vector(count)
 attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
 attr title "packets dropped (checksum error), count"
+8	9217 9 0 0 1 1 1 0 0 0 0
 vector 9 UrbanDenseNetwork.gnb2.udp passedUpPk:vector(count) ETV
 attr interpolationmode none
 attr recordingmode vector(count)
 attr source packetSentToUpper
 attr title "packets passed up, count"
+9	9226 9 0 0 1 1 1 0 0 0 0
 vector 10 UrbanDenseNetwork.gnb2.udp droppedPkWrongPort:vector(count) ETV
 attr interpolationmode none
 attr recordingmode vector(count)
 attr source packetDropReasonIsNoPortFound(packetDropped)
 attr title "packets dropped (wrong port), count"
+10	9235 10 0 0 1 1 1 0 0 0 0
 vector 11 UrbanDenseNetwork.gnb2.udp droppedPkBadChecksum:vector(count) ETV
 attr interpolationmode none
 attr recordingmode vector(count)
 attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
 attr title "packets dropped (checksum error), count"
+11	9245 10 0 0 1 1 1 0 0 0 0
 vector 12 UrbanDenseNetwork.ueDestination.udp passedUpPk:vector(count) ETV
 attr interpolationmode none
 attr recordingmode vector(count)
 attr source packetSentToUpper
 attr title "packets passed up, count"
+12	9255 10 0 0 1 1 1 0 0 0 0
 vector 13 UrbanDenseNetwork.ueDestination.udp droppedPkWrongPort:vector(count) ETV
 attr interpolationmode none
 attr recordingmode vector(count)
 attr source packetDropReasonIsNoPortFound(packetDropped)
 attr title "packets dropped (wrong port), count"
+13	9265 10 0 0 1 1 1 0 0 0 0
 vector 14 UrbanDenseNetwork.ueDestination.udp droppedPkBadChecksum:vector(count) ETV
 attr interpolationmode none
 attr recordingmode vector(count)
 attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
 attr title "packets dropped (checksum error), count"
-0	9145 9 0 0 1 1 1 0 0 0 0
-1	9154 9 0 0 1 1 1 0 0 0 0
-2	9163 9 0 0 1 1 1 0 0 0 0
-3	9172 9 0 0 1 1 1 0 0 0 0
-4	9181 9 0 0 1 1 1 0 0 0 0
-5	9190 9 0 0 1 1 1 0 0 0 0
-6	9199 9 0 0 1 1 1 0 0 0 0
-7	9208 9 0 0 1 1 1 0 0 0 0
-8	9217 9 0 0 1 1 1 0 0 0 0
-9	9226 9 0 0 1 1 1 0 0 0 0
-10	9235 10 0 0 1 1 1 0 0 0 0
-11	9245 10 0 0 1 1 1 0 0 0 0
-12	9255 10 0 0 1 1 1 0 0 0 0
-13	9265 10 0 0 1 1 1 0 0 0 0
-14	9275 10 0 0 1 1 1 0 0 0 0
-
+14	9275 12 0 0 1 1 1 0 0 0 0

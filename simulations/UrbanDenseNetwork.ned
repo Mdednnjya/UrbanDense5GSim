@@ -22,6 +22,11 @@ import simu5g.nodes.NR.gNodeB;
 import simu5g.nodes.NR.NRUe;
 import simu5g.nodes.backgroundCell.BackgroundCell;
 import simu5g.world.radio.LteChannelControl;
+import urbandense5gsim.simulations.nodes.AMF; 
+import urbandense5gsim.simulations.nodes.AUSF; 
+import urbandense5gsim.simulations.nodes.UDM; 
+import urbandense5gsim.simulations.nodes.SMF; 
+import urbandense5gsim.simulations.nodes.CustomGNodeB;
 
 
 
@@ -32,39 +37,69 @@ network UrbanDenseNetwork
         @display("bgi=background/budapest;bgb=1090.7362,771.27374");
 
     submodules:
-        channelControl: LteChannelControl {
-            @display("p=50,25;is=s");
-            @class(LteChannelControl);
-        }
-        configurator: Ipv4NetworkConfigurator {
-            @display("p=50,75");
-            config = xmldoc("demo.xml");
-        }
-        binder: Binder {
-            @display("p=50,125;is=s");
-        }
-        carrierAggregation: CarrierAggregation {
-            @display("p=50,175;is=s");
-        }
-        upf: Upf {
-            @display("p=587.20245,222.1025");
-        }
+    channelControl: LteChannelControl {
+        @display("p=50,25;is=s");
+        @class(LteChannelControl);
+    }
+    configurator: Ipv4NetworkConfigurator {
+        @display("p=50,75");
+        config = xmldoc("demo.xml");
+    }
+    binder: Binder {
+        @display("p=50,125;is=s");
+    }
+    carrierAggregation: CarrierAggregation {
+        @display("p=50,175;is=s");
+    }
 
-        gnb1: gNodeB {
-            @display("p=325.5475,267.74;is=vl");
-        }
-        ueSource: NRUe {
-            @display("p=348.36624,491.36374");
-        }
+    // 5G Core Network Components
+    amf: AMF {
+        @display("p=587.20245,150;is=l");
+        udmAddress = "udm";
+        ausfAddress = "ausf";
+        smfAddress = "smf";
+    }
+    ausf: AUSF {
+        @display("p=455.7,89.9;is=l");
+        udmAddress = "udm";
+    }
+    udm: UDM {
+        @display("p=714.55005,89.9;is=l");
+    }
+    smf: SMF {
+        @display("p=585.9,282.1;is=l");
+        upfAddress = "upf";
+    }
+    upf: Upf {
+        @display("p=587.20245,400");
+    }
 
-        gnb2: gNodeB {
-            @display("p=847.33624,267.74;is=vl");
-        }
-        ueDestination: NRUe {
-            @display("p=789.52875,491.36374");
-        }
+	// New Radio Network	
+    gnb1: CustomGNodeB {
+        @display("p=325.5475,267.74;is=vl");
+    }
+    gnb2: CustomGNodeB {
+        @display("p=847.33624,267.74;is=vl");
+    }
+    ueSource: NRUe {
+        @display("p=348.36624,491.36374");
+    }
+    ueDestination: NRUe {
+        @display("p=789.52875,491.36374");
+    }
 
-    connections allowunconnected:
-        upf.pppg++ <--> Eth10G <--> gnb1.ppp;
-        upf.pppg++ <--> Eth10G <--> gnb2.ppp;
+connections allowunconnected:
+    // Core Network Connections
+    amf.ausfg <--> Eth10G <--> ausf.amfg;
+    amf.udmg <--> Eth10G <--> udm.amfg;
+    amf.smfg <--> Eth10G <--> smf.amfg;
+    smf.upfg <--> Eth10G <--> upf.pppg++;
+
+    // RAN Connections
+    gnb1.ppp <--> Eth10G <--> upf.pppg++;
+    gnb2.ppp <--> Eth10G <--> upf.pppg++;
+
+    // AMF to gNodeB connections
+    amf.gnbgg++ <--> Eth10G <--> gnb1.amfg;
+    amf.gnbgg++ <--> Eth10G <--> gnb2.amfg;
 }
