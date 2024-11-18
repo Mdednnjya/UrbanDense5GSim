@@ -1,0 +1,24 @@
+# OMNeT++ specific
+/out/
+*_m.h
+*_m.cc
+.qtenvrc
+*.sca
+*.vec
+*.vci
+*.anf
+
+# Build system
+/Makefile
+*.so
+*.dylib
+*.dll
+*.a
+*.lib
+
+# IDE specific
+.settings/
+.cproject
+.project
+.idea/
+*.user

@@ -2,7 +2,7 @@
 # OMNeT++/OMNEST Makefile for UrbanDense5GSim
 #
 # This file was generated with the command:
-#  opp_makemake -f --deep -KSIMU5G_PROJ=../../simu5g -KINET4_5_PROJ=../../inet4.5 -L$$\(SIMU5G_PROJ\)/src -lsimu5g$$\(D\)
+#  opp_makemake clean
 #
 
 # Name of target to be created (-o option)
@@ -22,29 +22,25 @@ USERIF_LIBS = $(ALL_ENV_LIBS) # that is, $(QTENV_LIBS) $(CMDENV_LIBS)
 INCLUDE_PATH =
 
 # Additional object and library files to link with
-EXTRA_OBJS =
+EXTRA_OBJS = clean
 
 # Additional libraries (-L, -l options)
-LIBS = $(LDFLAG_LIBPATH)$(SIMU5G_PROJ)/src  -lsimu5g$(D)
+LIBS =
 
 # Output directory
-PROJECT_OUTPUT_DIR = ../out
-PROJECTRELATIVE_PATH = src
+PROJECT_OUTPUT_DIR = ../../out
+PROJECTRELATIVE_PATH = src/messages
 O = $(PROJECT_OUTPUT_DIR)/$(CONFIGNAME)/$(PROJECTRELATIVE_PATH)
 
 # Object files for local .cc, .msg and .sm files
-OBJS = $O/nodes/AMF.o $O/nodes/AUSF.o $O/nodes/SMF.o $O/nodes/UDM.o $O/messages/NetworkMessages_m.o
+OBJS = $O/NetworkMessages_m.o
 
 # Message files
 MSGFILES = \
-    messages/NetworkMessages.msg
+    NetworkMessages.msg
 
 # SM files
 SMFILES =
-
-# Other makefile variables (-K)
-SIMU5G_PROJ=../../simu5g
-INET4_5_PROJ=../../inet4.5
 
 #------------------------------------------------------------------------------
 
@@ -64,9 +60,6 @@ include $(CONFIGFILE)
 
 # Simulation kernel and user interface libraries
 OMNETPP_LIBS = $(OPPMAIN_LIB) $(USERIF_LIBS) $(KERNEL_LIBS) $(SYS_LIBS)
-ifneq ($(PLATFORM),win32)
-LIBS += -Wl,-rpath,$(abspath $(SIMU5G_PROJ)/src)
-endif
 
 COPTS = $(CFLAGS) $(IMPORT_DEFINES)  $(INCLUDE_PATH) -I$(OMNETPP_INCL_DIR)
 MSGCOPTS = $(INCLUDE_PATH)
@@ -83,8 +76,6 @@ endif
 
 #------------------------------------------------------------------------------
 # User-supplied makefile fragment(s)
--include makefrag
-
 #------------------------------------------------------------------------------
 
 # Main target
