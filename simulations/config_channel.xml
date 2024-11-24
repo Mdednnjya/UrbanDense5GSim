@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<config>
-    <AnalogueModel type="NRUrbanmacroModel">
-        <parameter name="scenario" type="string" value="URBAN_MACRO"/>
-        <parameter name="carrierFrequency" type="double" value="2"/>
-    </AnalogueModel>
-</config>

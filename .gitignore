@@ -1,0 +1,38 @@
+# Ignore binary files and executables
+Binaries/
+src/*.exe
+src/*.dbg
+
+# Ignore build outputs
+out/
+*.o
+*.obj
+*.so
+*.dll
+*.a
+*.lib
+*.exe
+
+# Ignore simulation results and temporary files
+simulations/results/
+simulations/run/
+
+# Ignore backup files, logs, and temporary files
+*~
+*.bak
+*.log
+*.tmp
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# Ignore IDE-specific files (optional, adjust for your IDE)
+.vscode/
+.idea/
+*.user
+*.workspace
+
+# Ignore specific configuration or local files
+omnetpp.ini
+*.lock
